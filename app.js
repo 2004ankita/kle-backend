@@ -12,7 +12,9 @@ const {Cart} = require('./model/Cart');
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/ankita')
+let MONGODB_URL = 'mongodb+srv://ankitadiggi13:7Lh1BGvkU48soXZh@cluster0.emdtd6t.mongodb.net/?retryWrites=true&w=majority'
+
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log('db connected');
 }).catch((err)=>{
